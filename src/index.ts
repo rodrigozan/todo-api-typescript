@@ -9,7 +9,6 @@ const app: Application = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(express.urlencoded())
 
 // mongoose.connect('mongodb://localhost/your-database-name', {
 //   useNewUrlParser: true,
