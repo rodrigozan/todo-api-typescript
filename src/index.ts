@@ -1,7 +1,7 @@
 import express, { Application, Request, Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv'
-//import todoRoutes from './routes/todos';
+import todoRoutes from './routes';
 
 dotenv.config()
 
@@ -20,7 +20,7 @@ app.get('/', (req: Request, res: Response) => {
   res.send(`Hello, it's a API and I'm running!`);
 });
 
-//app.use('/todos', todoRoutes);
+app.use('/all-to-do', todoRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

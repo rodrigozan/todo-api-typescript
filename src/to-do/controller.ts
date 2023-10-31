@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 import * as TodoService from './service';
 
-export const getTodos = async (req: Request, res: Response): Promise<void> => {
+export const getAll = async (req: Request, res: Response): Promise<void> => {
   try {
     const allTodos = await TodoService.getAllTodos();
     res.status(200).json({ allTodos });
