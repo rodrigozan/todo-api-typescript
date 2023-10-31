@@ -1,15 +1,8 @@
 import mongoose, { ConnectOptions } from 'mongoose';
 
-const mongooseOptions: ConnectOptions = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  // Add other options as needed.
-};
-
 const dbUri = 'mongodb+srv://rodzantodo:Seilad12@cluster0.rlc2e8r.mongodb.net/'; // Replace with your MongoDB URI.
 
-mongoose.connect(dbUri, mongooseOptions);
+mongoose.connect(dbUri);
 
 const db = mongoose.connection;
 
