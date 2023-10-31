@@ -1,6 +1,6 @@
 import mongoose, { ConnectOptions } from 'mongoose';
 
-const dbUri = 'mongodb+srv://rodzantodo:Seilad12@cluster0.rlc2e8r.mongodb.net/'; // Replace with your MongoDB URI.
+const dbUri = process.env.DB_URI; // Replace with your MongoDB URI.
 
 mongoose.connect(dbUri);
 
